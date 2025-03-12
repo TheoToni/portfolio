@@ -16,7 +16,7 @@ const firaMono = Fira_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "This is Antoni",
+  title: "Hey there!",
   description: "My portfolio page",
 };
 
@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${firaCode.variable} ${firaMono.variable}  bg-[#01090E]  min-h-screen lg:p-10 p-4`}
+        className={`${firaCode.variable} ${firaMono.variable}  bg-[#01090E]  min-h-screen lg:px-10 px-4 lg:py-10 py-4`}
       >
         <Header />
         {children}
