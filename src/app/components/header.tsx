@@ -12,19 +12,19 @@ export default function Header() {
             </span>
             <div className="hidden lg:flex">
               <Link
-                className="lg:border-l border-[#1e2d3d] p-5 hover:bg-[#263b50]"
+                className="lg:border-l border-[#1e2d3d] p-5 hover:bg-[#263b50] transition-all duration-300"
                 href={"/"}
               >
                 _hello
               </Link>
               <Link
-                className="lg:border-l border-[#1e2d3d] p-5 hover:bg-[#263b50]"
+                className="lg:border-l border-[#1e2d3d] p-5 hover:bg-[#263b50] transition-all duration-300"
                 href={"/about"}
               >
                 _about-me
               </Link>
               <Link
-                className="lg:border-l lg:border-r border-[#1e2d3d] p-5 hover:bg-[#263b50]"
+                className="lg:border-l lg:border-r border-[#1e2d3d] p-5 hover:bg-[#263b50] transition-all duration-300"
                 href={"/projects"}
               >
                 _projects
@@ -34,7 +34,7 @@ export default function Header() {
           <div className="flex items-center">
             <div className="hidden lg:block">
               <Link
-                className="lg:border-l border-[#1e2d3d] p-5 hover:bg-[#263b50] rounded-tr-lg"
+                className="lg:border-l border-[#1e2d3d] p-5 hover:bg-[#263b50] rounded-tr-lg transition-all duration-300"
                 href={"/contact"}
               >
                 _contact-me
