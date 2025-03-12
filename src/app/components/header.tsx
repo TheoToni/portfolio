@@ -3,9 +3,9 @@ import BurgerNav from "./burgerNav";
 
 export default function Header() {
   return (
-    <header className="bg-[#011627] text-white/70 border-l border-t border-r border-[#1e2d3d] rounded-t-lg">
+    <header className="bg-[#011627] text-white/70 border border-[#1e2d3d] rounded-t-lg">
       <nav>
-        <ul className="flex justify-between items-center flex-wrap">
+        <ul className="flex justify-between items-center flex-wrap pr-5 lg:pr-0">
           <div className="flex flex-wrap">
             <span className="inline-block min-w-[17rem] p-5">
               <Link href={"/"}>Antoni - Theodorou</Link>

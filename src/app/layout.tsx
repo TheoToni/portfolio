@@ -31,7 +31,8 @@ export default function RootLayout({
         className={`${firaCode.variable} ${firaMono.variable}  bg-[#01090E]  min-h-screen lg:px-10 px-4 lg:py-10 py-4`}
       >
         <Header />
-        {children}
+        <div className="bg-[#011627] border-x border-[#1e2d3d]">{children}</div>
+
         <Footer />
       </body>
     </html>
