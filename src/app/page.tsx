@@ -12,8 +12,10 @@ export default function Home() {
       <div className="max-w-7xl w-full px-4">
         <div className="z-10 text-white flex flex-col gap-6">
           <p>Hi all. I am</p>
-          <h1 className="text-6xl font-bold ">Antoni Theodorou</h1>
-          <p className="text-3xl text-[#4d5cce]">&gt; Full-Stack Developer</p>
+          <h1 className="sm:text-6xl text-4xl font-bold ">Antoni Theodorou</h1>
+          <p className="sm:text-3xl text-2xl text-[#4d5cce]">
+            &gt; Full-Stack Developer
+          </p>
         </div>
       </div>
     </main>
