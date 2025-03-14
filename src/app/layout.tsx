@@ -16,7 +16,7 @@ const firaMono = Fira_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hey there!",
+  title: "Hey 👋 Antoni here!",
   description: "My portfolio page",
 };
 

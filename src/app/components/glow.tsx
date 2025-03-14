@@ -1,10 +1,10 @@
 import React from "react";
 
-interface GlowProps {
+type GlowProps = {
   color: string;
   position?: string;
   animate?: boolean;
-}
+};
 
 export default function Glow({
   color,

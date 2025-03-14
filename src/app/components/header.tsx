@@ -8,23 +8,28 @@ export default function Header() {
         <ul className="flex justify-between items-center flex-wrap pr-5 lg:pr-0">
           <div className="flex flex-wrap">
             <span className="inline-block min-w-[17rem] p-5">
-              <Link href={"/"}>Antoni - Theodorou</Link>
+              <Link
+                className="hover:text-white transition-all duration-300"
+                href={"/"}
+              >
+                Antoni - Theodorou
+              </Link>
             </span>
             <div className="hidden lg:flex">
               <Link
-                className="lg:border-l border-[#1e2d3d] p-5 hover:bg-[#263b50] transition-all duration-300"
+                className="lg:border-l border-[#1e2d3d] p-5 hover:bg-[#263b50] hover:text-white transition-all duration-300"
                 href={"/"}
               >
                 _hello
               </Link>
               <Link
-                className="lg:border-l border-[#1e2d3d] p-5 hover:bg-[#263b50] transition-all duration-300"
+                className="lg:border-l border-[#1e2d3d] p-5 hover:bg-[#263b50] hover:text-white transition-all duration-300"
                 href={"/about"}
               >
                 _about-me
               </Link>
               <Link
-                className="lg:border-l lg:border-r border-[#1e2d3d] p-5 hover:bg-[#263b50] transition-all duration-300"
+                className="lg:border-l lg:border-r border-[#1e2d3d] p-5 hover:bg-[#263b50] hover:text-white transition-all duration-300"
                 href={"/projects"}
               >
                 _projects
@@ -34,7 +39,7 @@ export default function Header() {
           <div className="flex items-center">
             <div className="hidden lg:block">
               <Link
-                className="lg:border-l border-[#1e2d3d] p-5 hover:bg-[#263b50] rounded-tr-lg transition-all duration-300"
+                className="lg:border-l border-[#1e2d3d] p-5 hover:bg-[#263b50] hover:text-white rounded-tr-lg transition-all duration-300"
                 href={"/contact"}
               >
                 _contact-me
