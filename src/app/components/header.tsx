@@ -7,7 +7,7 @@ export default function Header() {
       <nav>
         <ul className="flex justify-between items-center flex-wrap pr-5 lg:pr-0">
           <div className="flex flex-wrap">
-            <span className="inline-block min-w-[17rem] p-5">
+            <span className="w-[17rem] p-5">
               <Link
                 className="hover:text-white transition-all duration-300"
                 href={"/"}
