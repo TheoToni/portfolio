@@ -17,19 +17,19 @@ export default function Header() {
             </span>
             <div className="hidden lg:flex">
               <Link
-                className="lg:border-l border-[#1e2d3d] p-5 hover:bg-[#263b50] hover:text-white transition-all duration-300"
+                className="lg:border-l border-[#1e2d3d] p-5 hover:bg-[#263b50] focus:bg-[#263b50] hover:text-white transition-all duration-300"
                 href={"/"}
               >
                 _hello
               </Link>
               <Link
-                className="lg:border-l border-[#1e2d3d] p-5 hover:bg-[#263b50] hover:text-white transition-all duration-300"
+                className="lg:border-l border-[#1e2d3d] p-5 hover:bg-[#263b50] focus:bg-[#263b50] hover:text-white transition-all duration-300"
                 href={"/about"}
               >
                 _about-me
               </Link>
               <Link
-                className="lg:border-l lg:border-r border-[#1e2d3d] p-5 hover:bg-[#263b50] hover:text-white transition-all duration-300"
+                className="lg:border-l lg:border-r border-[#1e2d3d] p-5 hover:bg-[#263b50] focus:bg-[#263b50] hover:text-white transition-all duration-300"
                 href={"/projects"}
               >
                 _projects

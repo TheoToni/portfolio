@@ -17,7 +17,7 @@ export default function Sidebar({ currentPage }: SidebarProps) {
             <Link
               href="/about/"
               className={
-                currentPage === "/about" ? "text-white" : "hover:text-white"
+                currentPage === "/about" ? "text-white" : "hover:text-white "
               }
             >
               <div className="flex items-center p-2 hover:bg-[#1e2d3d] rounded transition-all duration-300">
