@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FaFolder, FaFolderOpen } from "react-icons/fa";
+import { cn } from "@/lib/utils";
 
 type SidebarProps = {
   currentPage: string;
@@ -16,11 +17,18 @@ export default function Sidebar({ currentPage }: SidebarProps) {
           <li className="mb-1">
             <Link
               href="/about/"
-              className={
-                currentPage === "/about" ? "text-white" : "hover:text-white "
-              }
+              className={cn(
+                "hover:text-white",
+                currentPage === "/about" && "text-white"
+              )}
             >
-              <div className="flex items-center p-2 hover:bg-[#1e2d3d] rounded transition-all duration-300">
+              <div
+                className={cn(
+                  "flex items-center p-2 rounded transition-all duration-300",
+                  "hover:bg-[#1e2d3d]",
+                  currentPage === "/about" && "bg-[#1e2d3d]"
+                )}
+              >
                 {currentPage === "/about" ? (
                   <FaFolderOpen className="mr-2 text-[#64D2FF]" />
                 ) : (
@@ -33,12 +41,19 @@ export default function Sidebar({ currentPage }: SidebarProps) {
           <li className="mb-1">
             <Link
               href="/about/indiegame"
-              className={
-                currentPage === "indiegame" ? "text-white" : "hover:text-white"
-              }
+              className={cn(
+                "hover:text-white",
+                currentPage === "/about/indiegame" && "text-white"
+              )}
             >
-              <div className="flex items-center p-2 hover:bg-[#1e2d3d] rounded transition-all duration-300">
-                {currentPage === "indiegamedev" ? (
+              <div
+                className={cn(
+                  "flex items-center p-2 rounded transition-all duration-300",
+                  "hover:bg-[#1e2d3d]",
+                  currentPage === "/about/indiegame" && "bg-[#1e2d3d]"
+                )}
+              >
+                {currentPage === "/about/indiegame" ? (
                   <FaFolderOpen className="mr-2 text-[#E99287]" />
                 ) : (
                   <FaFolder className="mr-2 text-[#E99287]" />
@@ -50,12 +65,19 @@ export default function Sidebar({ currentPage }: SidebarProps) {
           <li className="mb-1">
             <Link
               href="/about/education"
-              className={
-                currentPage === "education" ? "text-white" : "hover:text-white"
-              }
+              className={cn(
+                "hover:text-white",
+                currentPage === "/about/education" && "text-white"
+              )}
             >
-              <div className="flex items-center p-2 hover:bg-[#1e2d3d] rounded transition-all duration-300">
-                {currentPage === "education" ? (
+              <div
+                className={cn(
+                  "flex items-center p-2 rounded transition-all duration-300",
+                  "hover:bg-[#1e2d3d]",
+                  currentPage === "/about/education" && "bg-[#1e2d3d]"
+                )}
+              >
+                {currentPage === "/about/education" ? (
                   <FaFolderOpen className="mr-2 text-[#43D9AD]" />
                 ) : (
                   <FaFolder className="mr-2 text-[#43D9AD]" />
