@@ -126,7 +126,7 @@ export default function MemoryGame() {
 
   return (
     <div className=" flex flex-col items-center justify-center p-2">
-      <h2 className="text-xl font-bold mb-2 text-white">Tech Memory Game</h2>
+      <h2 className="text-xl font-bold mb-2 text-white">Tech I use</h2>
 
       {gameComplete ? (
         <div className="text-center mb-2">
@@ -144,7 +144,7 @@ export default function MemoryGame() {
         </p>
       )}
 
-      <div className="grid grid-cols-4 gap-2 w-full max-w-xs">
+      <div className="grid grid-cols-4 gap-2 w-full max-w-xs pt-6">
         {cards.map((card) => (
           <motion.div
             key={card.id}
@@ -162,7 +162,7 @@ export default function MemoryGame() {
             >
               {/* Card Back */}
               <div
-                className={`absolute w-full h-full rounded-lg bg-[#1e2d3d] border border-[#4d5cce] flex items-center justify-center ${
+                className={`absolute w-full h-full rounded-lg bg-[#1e2d3d] border border-[#1e2d3d] flex items-center justify-center ${
                   card.isFlipped || card.isMatched ? "opacity-0" : "opacity-100"
                 } transition-opacity duration-500`}
               >
@@ -172,7 +172,7 @@ export default function MemoryGame() {
               {/* Card Front */}
               <div
                 className={`absolute w-full h-full rounded-lg bg-[#011627] border ${
-                  card.isMatched ? "border-green-400" : "border-[#fea55f]"
+                  card.isMatched ? "border-green-400" : "border-[#1e2d3d]"
                 } flex items-center justify-center ${
                   card.isFlipped || card.isMatched ? "opacity-100" : "opacity-0"
                 } transition-opacity duration-500`}

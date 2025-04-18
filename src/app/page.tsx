@@ -3,7 +3,7 @@ import MemoryGame from "./components/MemoryGame";
 
 export default function Home() {
   return (
-    <main className="min-h-screen lg:flex ">
+    <main className=" lg:flex ">
       <div className="h-[calc(100vh-13rem)] relative flex flex-col items-center justify-center overflow-hidden w-full md:flex-1">
         <Glow color="#6ee7b7" position="right-96 top-0" />
         <Glow color="#172D57" position="left-96 bottom-20" animate={true} />
