@@ -125,8 +125,8 @@ export default function MemoryGame() {
   };
 
   return (
-    <div className=" flex flex-col items-center justify-center p-2">
-      <h2 className="text-xl font-bold mb-2 text-white">Tech I use</h2>
+    <div className=" flex flex-col items-center p-2">
+      <h2 className="text-3xl  mb-2 text-white">Tech I use</h2>
 
       {gameComplete ? (
         <div className="text-center mb-2">
@@ -158,28 +158,32 @@ export default function MemoryGame() {
             <div
               className={`w-full h-full rounded-lg transition-transform duration-500 transform-gpu ${
                 card.isFlipped || card.isMatched ? "rotate-y-180" : ""
-              } relative`}
+              } relative shadow-lg`}
             >
               {/* Card Back */}
               <div
-                className={`absolute w-full h-full rounded-lg bg-[#1e2d3d] border border-[#1e2d3d] flex items-center justify-center ${
+                className={`absolute w-full h-full rounded-lg bg-gradient-to-br from-[#1e2d3d] to-[#172535] border border-[#2a3f58] flex items-center justify-center ${
                   card.isFlipped || card.isMatched ? "opacity-0" : "opacity-100"
-                } transition-opacity duration-500`}
+                } transition-opacity duration-500 shadow-inner`}
               >
-                <span className="text-lg text-[#4d5cce]">?</span>
+                <span className="text-lg text-[#4d5cce] font-bold">?</span>
               </div>
 
               {/* Card Front */}
               <div
-                className={`absolute w-full h-full rounded-lg bg-[#011627] border ${
-                  card.isMatched ? "border-green-400" : "border-[#1e2d3d]"
+                className={`absolute w-full h-full rounded-lg bg-gradient-to-br from-[#011627] to-[#01111d] border ${
+                  card.isMatched ? "border-green-400" : "border-[#2a3f58]"
                 } flex items-center justify-center ${
                   card.isFlipped || card.isMatched ? "opacity-100" : "opacity-0"
-                } transition-opacity duration-500`}
+                } transition-opacity duration-500 shadow-inner ${
+                  card.isMatched ? "bg-opacity-90" : ""
+                }`}
               >
                 {createElement(getCardIcon(card.tech), {
-                  size: 24,
-                  className: "text-white",
+                  size: 28,
+                  className: `text-white ${
+                    card.isMatched ? "text-green-400" : ""
+                  }`,
                   title: card.tech,
                 })}
               </div>

@@ -22,7 +22,7 @@ export default function Glow({
 
   return (
     <div
-      className={`absolute ${position} ${animate ? "animate-pulse" : ""}`}
+      className={`absolute z-30 ${position} ${animate ? "animate-pulse" : ""}`}
       style={{
         boxShadow: `60px 60px 150px 100px ${rgbaColor}, 0 0 200px 120px ${rgbaColor}, 0 0 250px 150px ${rgbaColor}`,
       }}

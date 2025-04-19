@@ -3,11 +3,10 @@ import MemoryGame from "./components/MemoryGame";
 
 export default function Home() {
   return (
-    <main className=" lg:flex ">
-      <div className="h-[calc(100vh-13rem)] relative flex flex-col items-center justify-center overflow-hidden w-full md:flex-1">
-        <Glow color="#6ee7b7" position="right-96 top-0" />
+    <main className="lg:flex relative justify-center items-center max-w-7xl mx-auto">
+      <div className="h-[calc(100vh-13rem)] flex flex-col items-center justify-center overflow-hidden flex-1">
         <Glow color="#172D57" position="left-96 bottom-20" animate={true} />
-
+        <Glow color="#172D57" position="right-0 top-20" animate={true} />
         <div className="max-w-7xl w-full px-4 flex flex-col gap-32 overflow-y-auto py-4">
           <div className="z-10 text-white flex flex-col gap-6">
             <p>Hi all. I am</p>
@@ -36,7 +35,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="text-white md:flex-1 bg-[#011627]/50 backdrop-blur-sm p-4 overflow-y-auto">
+      <div className="text-white bg-[#011627]/50 backdrop-blur-sm p-4 overflow-y-auto flex-1">
         <MemoryGame />
       </div>
     </main>
