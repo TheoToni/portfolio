@@ -162,11 +162,11 @@ export default function MemoryGame() {
             >
               {/* Card Back */}
               <div
-                className={`absolute w-full h-full rounded-lg bg-gradient-to-br from-[#1e2d3d] to-[#172535] border border-[#2a3f58] flex items-center justify-center ${
+                className={`absolute w-full h-full rounded-lg bg-[#011627] border-2 border-[#43d9ad] flex items-center justify-center ${
                   card.isFlipped || card.isMatched ? "opacity-0" : "opacity-100"
-                } transition-opacity duration-500 shadow-inner`}
+                } transition-opacity duration-500 shadow-[0_0_15px_rgba(67,217,173,0.5)] overflow-hidden`}
               >
-                <span className="text-lg text-[#4d5cce] font-bold">?</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#43d9ad]/20 via-[#43d9ad]/10 to-[#43d9ad]/20 animate-gradient-x"></div>
               </div>
 
               {/* Card Front */}
