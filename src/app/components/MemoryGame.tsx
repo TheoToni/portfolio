@@ -127,6 +127,7 @@ export default function MemoryGame() {
   return (
     <div className=" flex flex-col items-center p-2">
       <h2 className="text-3xl  mb-2 text-white">Tech I use</h2>
+      <h3>click and find out!</h3>
 
       {gameComplete ? (
         <div className="text-center mb-2">
