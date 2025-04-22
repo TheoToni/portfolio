@@ -1,20 +1,22 @@
+import Image from "next/image";
+
 type ProjectCardProps = {
   title: string;
   description: string;
   technologies: string[];
+  imageUrl: string;
 };
 
 export default function ProjectCard({
   title,
   description,
   technologies,
+  imageUrl,
 }: ProjectCardProps) {
   return (
     <div className="bg-[#011627] border border-[#1e2d3d] rounded-lg overflow-hidden hover:border-[#4d5cce] transition-colors duration-300">
       <div className="h-48 bg-[#1e2d3d] relative">
-        <div className="absolute inset-0 flex items-center justify-center text-xl text-white">
-          {title}
-        </div>
+        <Image src={imageUrl} alt={title} fill className="object-cover" />
       </div>
       <div className="p-4">
         <h2 className="text-xl font-semibold text-white mb-2">{title}</h2>
