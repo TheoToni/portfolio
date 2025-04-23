@@ -1,4 +1,6 @@
+import Link from "next/link";
 import ProjectCard from "../components/ProjectCard";
+import { projects } from "./projectsData";
 
 export default function ProjectsPage() {
   return (
@@ -6,26 +8,16 @@ export default function ProjectsPage() {
       <h1 className="text-3xl font-bold text-white mb-8">My Projects</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 flex-1">
-        <ProjectCard
-          imageUrl="/path/to/project-image.jpg"
-          title="Project Title"
-          description="Project description goes here. This is a brief overview of what the project does."
-          technologies={["React", "Next.js", "Tailwind"]}
-        />
-
-        <ProjectCard
-          imageUrl="/path/to/project-image.jpg"
-          title="Another Project"
-          description="This is another project with its own description and details."
-          technologies={["TypeScript", "React"]}
-        />
-
-        <ProjectCard
-          imageUrl="/path/to/project-image.jpg"
-          title="Third Project"
-          description="A third example project to demonstrate the grid layout."
-          technologies={["Node.js", "Express", "MongoDB"]}
-        />
+        {projects.map((project) => (
+          <Link key={project.id} href={`/projects/${project.id}`}>
+            <ProjectCard
+              imageUrl={project.image}
+              title={project.title}
+              description={project.description}
+              technologies={project.technologies}
+            />
+          </Link>
+        ))}
       </div>
     </div>
   );
