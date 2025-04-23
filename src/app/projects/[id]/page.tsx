@@ -6,6 +6,7 @@ export default function ProjectDetailPage({
 }: {
   params: { id: string };
 }) {
+  // Find the project from the imported array using the id from params
   const project = projects.find((p) => p.id === params.id);
 
   if (!project) {

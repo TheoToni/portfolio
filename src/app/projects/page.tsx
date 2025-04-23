@@ -1,6 +1,6 @@
 import Link from "next/link";
 import ProjectCard from "../components/ProjectCard";
-import { projects } from "./projectsData";
+import { projects } from "../projectsData";
 
 export default function ProjectsPage() {
   return (
@@ -9,9 +9,9 @@ export default function ProjectsPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 flex-1">
         {projects.map((project) => (
-          <Link key={project.id} href={`/projects/${project.id}`}>
+          <Link key={project.id} href={`/projects/${project.id}`} passHref>
             <ProjectCard
-              imageUrl={project.image}
+              imageUrl={project.imageUrl}
               title={project.title}
               description={project.description}
               technologies={project.technologies}

@@ -46,5 +46,34 @@ export const projects: Project[] = [
       The game tracks matches and congratulates players when all pairs are found.
     `,
   },
+  {
+    id: "coleurs",
+    title: "Coleurs - Color Palette Generator",
+    description:
+      "A web application that allows users to generate, save, and explore color palettes.",
+    technologies: ["React", "Vite", "TypeScript", "CSS"],
+    image: "/projects/coleurs.png", // Assuming standard path
+    github: "", // Placeholder
+    live: "", // Placeholder
+    longDescription: `
+      A web application built with React and Vite that allows users to generate, 
+      save, and explore color palettes. Features include color generation, 
+      saving palettes, and exploring existing ones.
+    `,
+  },
+  {
+    id: "ticnumtoe",
+    title: "TicNumToe - Brain Training Game",
+    description:
+      "A web game designed to challenge and train cognitive skills by solving simple math problems against the clock.",
+    technologies: ["React", "TypeScript", "Shadcn UI", "Tailwind CSS"],
+    image: "/projects/ticnumtoe.png", // Assuming standard path
+    github: "", // Placeholder
+    live: "", // Placeholder
+    longDescription: `
+      A brain training game built with React, Shadcn UI, and Tailwind CSS. 
+      Players solve simple math problems against the clock to improve cognitive skills.
+    `,
+  },
   // Add more projects as needed
 ];
