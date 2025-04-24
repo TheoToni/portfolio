@@ -4,24 +4,29 @@ type ProjectCardProps = {
   title: string;
   description: string;
   technologies: string[];
-  image: string; // Changed imageUrl to image
+  image: string;
 };
 
 export default function ProjectCard({
   title,
   description,
   technologies,
-  image, // Changed imageUrl to image
+  image,
 }: ProjectCardProps) {
   return (
-    <div className="bg-[#011627] border border-[#1e2d3d] rounded-lg overflow-hidden hover:border-[#4d5cce] transition-colors duration-300 max-h-[500px] flex flex-col">
+    // Set a fixed height instead of max-height
+    <div className="bg-[#011627] border border-[#1e2d3d] rounded-lg overflow-hidden hover:border-[#4d5cce] transition-colors duration-300 h-[450px] flex flex-col">
       <div className="h-48 bg-[#1e2d3d] relative">
         <Image src={image} alt={title} fill className="object-cover" /> //
         Changed imageUrl to image
       </div>
       <div className="p-4 overflow-y-auto flex-1">
-        <h2 className="text-xl font-semibold text-white mb-2">{title}</h2>
-        <p className="text-white/70 mb-4">{description}</p>
+        {/* Add truncate class to the title */}
+        <h2 className="text-xl font-semibold text-white mb-2 truncate">
+          {title}
+        </h2>
+        {/* Add line-clamp class to the description */}
+        <p className="text-white/70 mb-4 line-clamp-3">{description}</p>
         <div className="flex flex-wrap gap-2 mb-4">
           {technologies.map((tech, index) => (
             <span

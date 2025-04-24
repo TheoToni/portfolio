@@ -1,10 +1,18 @@
-// ... existing code ...
-
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  // ... other config ...
+  content: [
+    // ... your content paths
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [
+    require('@tailwindcss/line-clamp'), // Add this line
+  ],
+}
+module.exports = {
   theme: {
     extend: {
-      // ... other extensions ...
       animation: {
         "gradient-x": "gradient-x 3s ease infinite",
       },
