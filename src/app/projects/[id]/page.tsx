@@ -1,12 +1,12 @@
 import { notFound } from "next/navigation";
 import { projects } from "../projectsData";
+import Image from "next/image";
 
 export default function ProjectDetailPage({
   params,
 }: {
   params: { id: string };
 }) {
-  // Find the project from the imported array using the id from params
   const project = projects.find((p) => p.id === params.id);
 
   if (!project) {
@@ -15,6 +15,15 @@ export default function ProjectDetailPage({
 
   return (
     <div className="container mx-auto p-4 min-h-[calc(100vh-13rem)]">
+      <div className="relative w-full h-64 md:h-96 mb-6 rounded-lg overflow-hidden">
+        <Image
+          src={project.imageUrl}
+          alt={`${project.title} screenshot`}
+          fill
+          className="object-cover"
+          priority // Prioritize loading the main project image
+        />
+      </div>
       <h1 className="text-3xl font-bold text-white mb-4">{project.title}</h1>
       <p className="text-white/80 mb-6">{project.description}</p>
       <div className="mb-6">

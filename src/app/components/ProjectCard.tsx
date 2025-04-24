@@ -4,19 +4,20 @@ type ProjectCardProps = {
   title: string;
   description: string;
   technologies: string[];
-  imageUrl: string;
+  image: string; // Changed imageUrl to image
 };
 
 export default function ProjectCard({
   title,
   description,
   technologies,
-  imageUrl,
+  image, // Changed imageUrl to image
 }: ProjectCardProps) {
   return (
     <div className="bg-[#011627] border border-[#1e2d3d] rounded-lg overflow-hidden hover:border-[#4d5cce] transition-colors duration-300 max-h-[500px] flex flex-col">
       <div className="h-48 bg-[#1e2d3d] relative">
-        <Image src={imageUrl} alt={title} fill className="object-cover" />
+        <Image src={image} alt={title} fill className="object-cover" /> //
+        Changed imageUrl to image
       </div>
       <div className="p-4 overflow-y-auto flex-1">
         <h2 className="text-xl font-semibold text-white mb-2">{title}</h2>

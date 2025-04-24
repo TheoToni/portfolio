@@ -1,6 +1,6 @@
 import Link from "next/link";
 import ProjectCard from "../components/ProjectCard";
-import { projects } from "../projectsData";
+import { projects } from "./projectsData";
 
 export default function ProjectsPage() {
   return (
@@ -11,7 +11,7 @@ export default function ProjectsPage() {
         {projects.map((project) => (
           <Link key={project.id} href={`/projects/${project.id}`} passHref>
             <ProjectCard
-              imageUrl={project.imageUrl}
+              image={project.imageUrl}
               title={project.title}
               description={project.description}
               technologies={project.technologies}
