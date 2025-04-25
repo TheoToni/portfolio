@@ -1,15 +1,14 @@
 import Sidebar from "@/app/components/sidebar";
-import ConsoleBox from "@/app/components/ConsoleBox"; // Import the ConsoleBox component
+import ConsoleBox from "@/app/components/ConsoleBox";
 
 export default function Page() {
   return (
     <div className="flex flex-col lg:flex-row min-h-[calc(100vh-13rem)]">
-      {/* Corrected currentPage prop */}
       <Sidebar currentPage="/about/education" />
 
       <main className="flex-1 p-6">
         <h1 className="text-2xl font-bold text-white mb-4">Education</h1>
-        {/* Use the ConsoleBox component for education details */}
+
         <ConsoleBox command="cat history.log" promptPath="~/education">
           ========================================
           <br />

@@ -1,5 +1,5 @@
 import Sidebar from "../../components/sidebar";
-import ConsoleBox from "../../components/ConsoleBox"; // Import the new component
+import ConsoleBox from "../../components/ConsoleBox";
 
 export default function Page() {
   return (
@@ -8,7 +8,7 @@ export default function Page() {
 
       <main className="flex-1 p-6">
         <h1 className="text-2xl font-bold text-white mb-4">Indie Game Dev</h1>
-        {/* Use the ConsoleBox component */}
+
         <ConsoleBox command="cat gamedev_log.txt" promptPath="~/indiegame">
           Venturing into the world of indie game development! Currently
           experimenting with [mention game engine, e.g., Godot, Unity] and
