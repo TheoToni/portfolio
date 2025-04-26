@@ -1,7 +1,13 @@
+"use client";
+
 import Link from "next/link";
 import BurgerNav from "./burgerNav";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 export default function Header() {
+  const pathname = usePathname();
+
   return (
     <header className="bg-[#011627] text-white/70 border border-[#1e2d3d] rounded-t-lg">
       <nav>
@@ -17,19 +23,28 @@ export default function Header() {
             </span>
             <div className="hidden lg:flex">
               <Link
-                className="lg:border-l border-[#1e2d3d] p-5 hover:bg-[#263b50] focus:bg-[#263b50] hover:text-white transition-all duration-300"
+                className={cn(
+                  "lg:border-l border-[#1e2d3d] p-5 hover:bg-[#263b50] hover:text-white transition-all duration-300",
+                  pathname === "/" && "bg-[#1e2d3d] text-white"
+                )}
                 href={"/"}
               >
                 _hello
               </Link>
               <Link
-                className="lg:border-l border-[#1e2d3d] p-5 hover:bg-[#263b50] focus:bg-[#263b50] hover:text-white transition-all duration-300"
+                className={cn(
+                  "lg:border-l border-[#1e2d3d] p-5 hover:bg-[#263b50] hover:text-white transition-all duration-300",
+                  pathname.startsWith("/about") && "bg-[#1e2d3d] text-white"
+                )}
                 href={"/about"}
               >
                 _about-me
               </Link>
               <Link
-                className="lg:border-l lg:border-r border-[#1e2d3d] p-5 hover:bg-[#263b50] focus:bg-[#263b50] hover:text-white transition-all duration-300"
+                className={cn(
+                  "lg:border-l lg:border-r border-[#1e2d3d] p-5 hover:bg-[#263b50] hover:text-white transition-all duration-300",
+                  pathname === "/projects" && "bg-[#1e2d3d] text-white"
+                )}
                 href={"/projects"}
               >
                 _projects
@@ -39,7 +54,10 @@ export default function Header() {
           <div className="flex items-center">
             <div className="hidden lg:block">
               <Link
-                className="lg:border-l border-[#1e2d3d] p-5 hover:bg-[#263b50] hover:text-white rounded-tr-lg transition-all duration-300"
+                className={cn(
+                  "lg:border-l border-[#1e2d3d] p-5 hover:bg-[#263b50] hover:text-white rounded-tr-lg transition-all duration-300",
+                  pathname === "/contact" && "bg-[#1e2d3d] text-white"
+                )}
                 href={"/contact"}
               >
                 _contact-me
