@@ -32,6 +32,13 @@ export const projects: Project[] = [
     technologies: ["React", "TypeScript", "Shadcn UI", "Tailwind CSS"],
     imageUrl: "/ticnumtoe.png",
   },
+  {
+    id: "co2-calculator",
+    title: "CO2 Calculator",
+    description: "A CO2 calculator for a consumer protection page.",
+    technologies: ["Placeholder Tech 1", "Placeholder Tech 2"],
+    imageUrl: "/co2.png",
+  },
 ];
 
 // Helper function to get project data by ID (optional, but can be useful)
