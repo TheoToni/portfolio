@@ -15,7 +15,7 @@ export default function ProjectDetailPage({
 
   return (
     <div className="container flex justify-center items-center mx-auto p-4 min-h-[calc(100vh-13rem)]">
-      <div className="flex flex-col md:flex-row md:gap-8">
+      <div className="flex flex-col md:flex-row md:gap-8 w-full">
         <div className="md:w-1/2 mb-6 md:mb-0">
           <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden border-2 border-green-400 shadow-lg shadow-green-400/50">
             <Image
